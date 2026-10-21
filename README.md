@@ -134,7 +134,12 @@ The three primary security scenarios covered by the test suite are unauthenticat
 
 ## Screenshots
 
-![EthioTourism Home Page](public/images/01.png,public/images/02.png, public/images/03.png )
+<img width="866" height="411" alt="01" src="https://github.com/user-attachments/assets/efd68991-c2eb-4ddd-906d-9e69645556eb" />
+<img width="911" height="425" alt="02" src="https://github.com/user-attachments/assets/670acc21-904e-4c4a-8019-2ac1e4b632c1" />
+<img width="425" height="299" alt="03" src="https://github.com/user-attachments/assets/06d522c1-3f58-4539-85da-71f86e6d9277" />
+
+
+
 
 ## License
 
