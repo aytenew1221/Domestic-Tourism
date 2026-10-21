@@ -115,7 +115,8 @@ Configure production environment variables on your hosting platform before deplo
 
 ## More
 
-https://ethio-tourism-amber.vercel.app/
+https://github.com/aytenew1221/Domestic-Tourism.git
+https://www.loom.com/share/6760f01aa767449bb14d3b7a14b4f563
 
 ## Demo storage and deployment warning
 
