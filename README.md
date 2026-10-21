@@ -132,6 +132,10 @@ This build intentionally uses an in-memory store instead of a database. It is su
 
 The three primary security scenarios covered by the test suite are unauthenticated write access, IDOR/cross-account access, and unsafe redirect/session manipulation. Run the suite against the deployed URL before declaring the live flow verified.
 
+## Screenshots
+
+![EthioTourism Home Page](public/images/01.png,public/images/02.png, public/images/03.png )
+
 ## License
 
 MIT License
