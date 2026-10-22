@@ -6,10 +6,9 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 const destinationIcon = L.icon({
-  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-  iconRetinaUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+  iconUrl: "/images/leaflet/marker-icon.png",
+  iconRetinaUrl: "/images/leaflet/marker-icon-2x.png",
+  shadowUrl: "/images/leaflet/marker-shadow.png",
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
@@ -33,23 +32,15 @@ function FitMarkers({ places }) {
   );
 
   useEffect(() => {
-    const validPlaces = places.filter(
-      (place) =>
-        Array.isArray(place.coordinates) &&
-        place.coordinates.length === 2 &&
-        place.coordinates.every(
-          (value) => typeof value === "number" && Number.isFinite(value),
-        ),
-    );
+    if (places.length === 1) {
+      map.setView(places[0].coordinates, 9);
+    } else if (places.length > 1) {
+      const bounds = L.latLngBounds(places.map((place) => place.coordinates));
 
-    if (validPlaces.length === 1) {
-      map.setView(validPlaces[0].coordinates, 9);
-    } else if (validPlaces.length > 1) {
-      const bounds = L.latLngBounds(
-        validPlaces.map((place) => place.coordinates),
-      );
-
-      map.fitBounds(bounds, { padding: [25, 25], maxZoom: 10 });
+      map.fitBounds(bounds, {
+        padding: [25, 25],
+        maxZoom: 10,
+      });
     }
   }, [map, places, coordinatesKey]);
 
